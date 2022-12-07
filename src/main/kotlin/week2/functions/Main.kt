@@ -2,8 +2,21 @@ package week2.functions
 
 fun main() {
 
+    println(listOf("a", "b", "c").joinToString(
+        separator = "", prefix = "(", postfix = ")"
+    ))
 
+    displaySeparator(character = 'A', 2);
 
+}
+
+//fun with default values
+// In java to call a fun in kotlin you have to pass all arguments required
+// @JvmOverloas
+fun displaySeparator(character: Char = '*', size: Int = 10) {
+    repeat(size) {
+        println(character);
+    }
 }
 
 fun max(a: Int, b: Int): Int {
